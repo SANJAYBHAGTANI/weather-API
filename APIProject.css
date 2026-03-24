@@ -2,11 +2,10 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: "Iosevka Charon Mono", monospace;
-
+font-family: "Playfair Display", serif;
+font-optical-sizing: auto;
 }
 
-/* BODY */
 
 body{
 min-height:100vh;
@@ -16,7 +15,6 @@ align-items:center;
 background:url(weather.jpg) no-repeat center/cover;
 }
 
-/* MAIN CONTAINER */
 
 .main-container{
 display:flex;
@@ -60,7 +58,6 @@ border:none;
 border-radius:5px;
 width:220px;
 font-size:16px;
-margin: 0;
 }
 
 #search-box::placeholder{
@@ -138,14 +135,37 @@ width:90%;
 .weather-result{
 flex-direction:column;
 }
+.weather-result{
+position: relative;
+}
 
 #search-box{
-width:180px;
+    padding-left: 20px;
+    width:370px;
+}
+#search-button{
+    width: 70px;
+    padding-left: 0;
+}
+.result2{
+    width: 410px;
+    font-size: larger;
+}
+.result2 img{
+    height: 120px;
+    width: 180px;
+}
+.result1{
+    position: relative;
+    left: 120px;
+    font-size: 42px;
+    bottom:150px
+}
 }
 @media (max-width:480px){
 
 .main-container{
-width:95%;
+width:90%;
 padding:20px;
 }
 
@@ -155,18 +175,18 @@ line-height:28px;
 }
 
 .search-container{
-flex-direction:column;
 align-items:center;
 gap:8px;
 }
 
 #search-box{
-width:100%;
-font-size:15px;
+    padding-left: 20px;
+    width:320px;
+    margin-left: 0;
 }
-
 #search-button{
-width:100%;
+    width: 70px;
+    padding-left: 0;
 }
 
 .weather-result{
@@ -183,13 +203,14 @@ font-size:16px;
 }
 
 .result2 img{
-width:70px;
-height:70px;
+width:180px;
+height:100px;
+padding-left: 60px;
 }
 
 .result2 h4{
 font-size:14px;
+padding-left: 60px;
 }
 
-}
 }
